@@ -1,0 +1,265 @@
+<center><p id="notice"><%= notice %></p>
+<div clas="container">
+<h1>Confirm Your Details</h1>
+<div class="col-sm-3"></div>
+<div class="col-md-6">
+<table class="table table-hover">
+<tbody>
+<tr>
+  <td><strong>Mobile:</strong></td>
+  <td><%= @form.mobile %></td>
+</tr>
+
+<tr>
+  <td><strong>Current mail:</strong></td>
+  <td><%= @form.curmail %></td>
+</tr>
+
+<tr>
+  <td><strong>Current Status:</strong></td>
+ <td><%= @form.current %></td>
+</tr>
+
+<%if @form.current == 'Working'%>
+<tr>
+  <td><strong>Campus Placed:</strong></td>
+<td> <%= @form.is_placed %></td>
+</tr>
+<tr>
+  <td><strong>Field Of Work:</strong></td>
+  <td><%= @form.fieldofwork %></td>
+</tr>
+
+<tr>
+  <td><strong>Company name:</strong></td>
+  <td><%= @form.comname %></td>
+</tr>
+
+<tr>
+  <td><strong>Designation:</strong></td>
+  <td><%= @form.desig %></td>
+</tr>
+
+<tr>
+  <td><strong>Year Of Experience:</strong></td>
+  <td><%= @form.expyear %></td>
+</tr>
+<tr>
+  <td><strong>Company_Mailid:</strong></td>
+  <td><%= @form.workmail %></td>
+</tr>
+
+<tr>
+  <td><strong>Apt Name/Door no:</strong></td>
+  <td><%= @form.workapt %></td>
+</tr>
+<tr>
+  <td><strong>Street:</strong></td>
+  <td><%= @form.workstreet %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.workcity %></td>
+</tr>
+<tr>
+  <td><strong>State:</strong></td>
+  <td><%= @form.workstate %></td>
+</tr>
+<tr>
+  <td><strong>Country:</strong></td>
+  <td><%= @form.workcountry %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.workzip %></td>
+</tr>
+
+
+
+
+
+<% elsif @form.current== 'Higher Studies'%>
+<tr>
+  <td><strong>University Name:</strong></td>
+  <td><%= @form.univ %></td>
+</tr>
+ <td><strong>Apt Name/Door no:</strong></td>
+  <td><%= @form.univapt %></td>
+</tr>
+<tr>
+  <td><strong>Street:</strong></td>
+  <td><%= @form.univstreet %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.univcity %></td>
+</tr>
+<tr>
+  <td><strong>State:</strong></td>
+  <td><%= @form.univstate %></td>
+</tr>
+<tr>
+  <td><strong>Country:</strong></td>
+  <td><%= @form.highercountry %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.univzip %></td>
+</tr>
+<tr>
+  <td><strong>Course Name:</strong></td>
+  <td><%= @form.course %></td>
+</tr>
+
+<tr>
+  <td><strong>Course Duration:</strong></td>
+  <td><%= @form.courseduration %></td>
+</tr>
+<% elsif @form.current== 'Entrepreneur'%>
+<tr>
+  <td><strong>Field:</strong></td>
+  <td><%= @form.Field %></td>
+</tr>
+<tr>
+  <td><strong>Company Name:</strong></td>
+  <td><%= @form.entcompany %></td>
+</tr>
+<tr>
+<td><strong>Designation:</strong></td>
+  <td><%= @form.entdesignation %></td>
+</tr>  
+<tr>
+  <td><strong>No of Employees:</strong></td>
+  <td><%= @form.noofemployees%></td>
+</tr>
+<tr>
+<td><strong>Annual Turnover:</strong></td>
+  <td><%= @form.annualturnover%></td>
+</tr>
+<tr>
+<td><strong>Website Link:</strong></td>
+  <td><%= @form.website%></td>
+</tr>
+<tr>
+  <td><strong>Apt Name/Door no:</strong></td>
+  <td><%= @form.entapt %></td>
+</tr>
+<tr>
+  <td><strong>Street:</strong></td>
+  <td><%= @form.entstreet %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.entcity %></td>
+</tr>
+<tr>
+  <td><strong>State:</strong></td>
+  <td><%= @form.entstate %></td>
+</tr>
+<tr>
+  <td><strong>Country:</strong></td>
+  <td><%= @form.entcountry %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.entzip %></td>
+</tr>
+
+<!-- 
+<tr>
+<td><strong>Contribution:</strong></td>
+  <td><%= @form.contribute%></td>
+</tr>
+ -->
+<% elsif @form.current== 'Government official'%>
+<tr>
+  <td><strong>Government Type:</strong></td>
+  <td><%= @form.govtsector %></td>
+</tr>
+<tr>
+  <td><strong>Designation:</strong></td>
+  <td><%= @form.govtdesig %></td>
+</tr>
+ <td><strong>Apt Name/Door no:</strong></td>
+  <td><%= @form.govtapt %></td>
+</tr>
+<tr>
+  <td><strong>Street:</strong></td>
+  <td><%= @form.govtstreet %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.govtcity %></td>
+</tr>
+<tr>
+  <td><strong>State:</strong></td>
+  <td><%= @form.govtstate %></td>
+</tr>
+<tr>
+  <td><strong>Country:</strong></td>
+  <td><%= @form.govtcountry %></td>
+</tr>
+<tr>
+<<<<<<< HEAD
+  <td><strong>City:</strong></td>
+=======
+  <td><strong>Zip:</strong></td>
+>>>>>>> 2ae00543d694b8a54205ccd375f7e31e1f9c728f
+  <td><%= @form.govtZip %></td>
+</tr>
+
+<tr><td><strong>Phone number:</strong></td>
+  <td><%= @form.govtphone %></td>
+</tr>
+
+<% elsif @form.current== 'Other Field'%>
+<tr>
+  <td><strong>Field:</strong></td>
+  <td><%= @form.otherfield %></td>
+</tr>
+<tr>
+  <td><strong>Work Place</strong></td>
+  <td><%= @form.othercompany %></td>
+</tr>
+
+<tr>
+  <td><strong>Designation</strong></td>
+  <td><%= @form.otherdesignation%></td>
+</tr>
+ <td><strong>Apt Name/Door no:</strong></td>
+  <td><%= @form.otherapt %></td>
+</tr>
+<tr>
+  <td><strong>Street:</strong></td>
+  <td><%= @form.otherstreet %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.othercity %></td>
+</tr>
+<tr>
+  <td><strong>State:</strong></td>
+  <td><%= @form.otherstate %></td>
+</tr>
+<tr>
+  <td><strong>Country:</strong></td>
+  <td><%= @form.othercountry %></td>
+</tr>
+<tr>
+  <td><strong>City:</strong></td>
+  <td><%= @form.otherzip %></td>
+</tr>
+<%end%>
+</tr>
+</tbody>
+</table>
+
+<%= link_to edit_form_path, class: "btn btn-default" do %>
+    <i class="glyphicon glyphicon-edit"></i> Edit
+<% end %>
+</br>
+<%= link_to staticpage_index_path, class: "btn btn-default" do %>
+    <i class="glyphicon glyphicon-ok"></i> Confirmed
+<% end %>
+</div>
+</div>

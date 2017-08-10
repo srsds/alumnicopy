@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <h1><%= @question.tile %></h1><br>
+	<p><%= @question.body %></p>
+  <h4><small>Submitted by <%= @question.student_id %></small></h4>
+</div>
+
+
+
+<% if @question.student_id == current_student.id -%>
+	<div class="btn-group">
+		<%= link_to 'Edit', edit_question_path(@question), class: "btn btn-default" %>
+		<%= link_to 'Delete', @question, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+	</div>
+<% end %>
+
+
+
+<!-- <p>
+  <strong>Tile:</strong>
+  <%= @question.tile %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %> -->
+ </p><%= link_to "New_review",new_question_comment_path(@question),class: "btn btn-danger"%> 
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
+
+<h3 class="comments_title">
+  <%= @question.comments.count %> Comments
+</h3>
+
+<%= simple_form_for [@question, Comment.new]  do |f| %>
+  <div class="field">
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+<% end %>
