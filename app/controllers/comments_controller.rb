@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_student!
+    # before_action :authenticate_student!
   before_action :set_question
 
 
@@ -27,9 +27,9 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-   @question = Question.find(params[:question_id])
+   # @question = question.find(params[:question_id])
     @comment = @question.comments.new(comment_params)
-    @comment.student = current_student
+    @comment.student_id = current_student.id if current_student
  
 
     # @comment.student_id= current_student.id

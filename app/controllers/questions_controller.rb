@@ -1,10 +1,10 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
- before_action :authenticate_student!
+ # before_action :authenticate_student!
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+    @questions = Question.all.order("created_at DESC")
   end
 
   # GET /questions/1

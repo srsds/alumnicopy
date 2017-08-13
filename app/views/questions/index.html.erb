@@ -1,18 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Questions</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tile</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="col-sm-3"></div>
+<div class="col-md-6">
 
-  ail<% @questions.each do |question| %>
-<div class="link row clearfix">
+<% @questions.each do |question| %>
+<div class="container">
     <h2>
         <%= link_to question.tile, question %><br>
         <small class="author">Submitted
@@ -35,6 +28,8 @@
     <% end %>
   </h2>
             </div>
+<div class="col-sm-3"></div>
+<div class="col-md-6">
 
             <h1>New Post:</h1>
             <%= simple_form_for [@question, Question.new]  do |f| %>
@@ -47,7 +42,8 @@
     <%= f.button :submit %>
   </div>
 <% end %>
-
+</div>
+</div>
 <br>
 <!-- 
 <%= link_to 'New Question', new_question_path %>
