@@ -8,6 +8,7 @@ end
 #gem 'neighborhood', '~> 0.1.0'
 gem 'httparty'
 gem 'awesome_print'
+ gem 'record_tag_helper', '~> 1.0'
 gem 'underscore-rails'
 gem 'dependent-fields-rails'
 gem 'jquery-rails'

@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
- # before_action :authenticate_student!
+  before_action :authenticate_student!,except: [:index, :show]
   # GET /questions
   # GET /questions.json
   def index
@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
     @question = current_student.questions.build(question_params)
     respond_to do |format|
       if @question.save
-        format.html { redirect_to questions_path, notice: 'Question was successfully created.' }
+        format.html { redirect_to questions_path, notice: '' }
         # format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new }
@@ -70,6 +70,14 @@ class QuestionsController < ApplicationController
     @question.downvote_by current_student
     redirect_to questions_path
   end
+
+#   def previous_question
+#   self.class.first(:conditions => ["tile < ", tile], :order => "tile desc")
+# end
+
+# def next_question
+#   self.class.first(:conditions => ["tile > ?", tile], :order => "tile asc")
+# end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -5,7 +5,7 @@ class Student < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
          has_many :forms
          has_many :questions
-             has_many :comments
+             # has_many :comments
     
     #validates_presence_of :regno    
       # validates :regno, uniqueness: true;
